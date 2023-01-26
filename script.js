@@ -50,3 +50,6 @@ function speakText() {
     // speak that utterance
     window.speechSynthesis.speak(utterance);
 }
+
+const hello = document.getElementById('hello');
+hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку`
