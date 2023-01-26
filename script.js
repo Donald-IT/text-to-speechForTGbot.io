@@ -54,5 +54,7 @@ function speakText() {
     window.speechSynthesis.speak(utterance);
 }
 
-const hello = document.getElementById('hello');
+let helloDiv = document.getElementById("hello__block");
+const hello = document.createElement('p');
 hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку`
+helloDiv.appendChild(hello)
