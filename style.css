@@ -69,3 +69,22 @@ body {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
+#hello__block {
+    font-size: bold;
+}
+
+#insertButton {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: rgba(19, 19, 19, 0.186);
+    transition: all 0.2s ease;
+}
+
+#insertButton:hover {
+    background-color: rgba(19, 19, 19, 0.886);
+    color: #fff;
+}

@@ -1,7 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-let textEl = document.getElementById('text').innerHTML;
+let textEl = document.getElementById('text');
 const voiceInEl = document.getElementById('voice');
 const pitchInEl = document.getElementById('pitch');
 const rateInEl = document.getElementById('rate');
@@ -43,7 +43,7 @@ function speakText() {
     // stop any speaking in progress
     window.speechSynthesis.cancel();
     // create new utterance with all the properties
-    const text = textEl;
+    const text = textEl.textContent;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = window.speechSynthesis.getVoices().find(voice => voice.voiceURI === voiceInEl.value);
     utterance.pitch = pitchInEl.value;
@@ -56,7 +56,16 @@ function speakText() {
 
 const helloDiv = document.getElementById("hello__block");
 const hello = document.createElement('p');
-const data = document.createElement('p');
 hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку`
-data.innerHTML = `${tg.initDataUnsafe}`
 helloDiv.appendChild(data)
+
+
+document.getElementById('insertButton').addEventListener('click', () => {
+    navigator.clipboard.readText()
+        .then(text => {
+            textEl.textContent = text
+        })
+        .catch(err => {
+            console.log('Something went wrong', err);
+        })
+})
