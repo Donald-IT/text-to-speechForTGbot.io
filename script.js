@@ -57,4 +57,4 @@ function speakText() {
 const helloDiv = document.getElementById("hello__block");
 const hello = document.createElement('p');
 hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку(!Ru озвучка очень плохо читает!)`
-helloDiv.appendChild(data)
+helloDiv.appendChild(hello)
