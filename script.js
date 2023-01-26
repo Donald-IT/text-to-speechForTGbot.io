@@ -1,3 +1,6 @@
+let tg = window.Telegram.WebApp;
+tg.expand();
+
 let textEl = document.getElementById('text').innerHTML;
 const voiceInEl = document.getElementById('voice');
 const pitchInEl = document.getElementById('pitch');
