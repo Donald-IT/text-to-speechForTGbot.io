@@ -43,7 +43,7 @@ function speakText() {
     // stop any speaking in progress
     window.speechSynthesis.cancel();
     // create new utterance with all the properties
-    const text = textEl;
+    const text = textEl.value;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = window.speechSynthesis.getVoices().find(voice => voice.voiceURI === voiceInEl.value);
     utterance.pitch = pitchInEl.value;
@@ -56,5 +56,5 @@ function speakText() {
 
 const helloDiv = document.getElementById("hello__block");
 const hello = document.createElement('p');
-hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку`
+hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку(!Ru озвучка очень плохо читает!)`
 helloDiv.appendChild(data)
