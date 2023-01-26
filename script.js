@@ -43,7 +43,7 @@ function speakText() {
     // stop any speaking in progress
     window.speechSynthesis.cancel();
     // create new utterance with all the properties
-    const text = textEl.textContent;
+    const text = textEl;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = window.speechSynthesis.getVoices().find(voice => voice.voiceURI === voiceInEl.value);
     utterance.pitch = pitchInEl.value;
