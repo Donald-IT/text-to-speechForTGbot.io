@@ -74,17 +74,11 @@ body {
     font-size: bold;
 }
 
-#insertButton {
-    margin-top: 15px;
-    padding: 10px;
+#text {
     font-size: inherit;
-    font-family: inherit;
-    cursor: pointer;
-    background-color: rgba(19, 19, 19, 0.186);
-    transition: all 0.2s ease;
-}
-
-#insertButton:hover {
-    background-color: rgba(19, 19, 19, 0.886);
+    text-align: center;
+    height: auto;
     color: #fff;
+    width: 100%;
+    background-color: rgba(123, 123, 123, 0.104);
 }

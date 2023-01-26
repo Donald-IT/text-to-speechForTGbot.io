@@ -58,14 +58,3 @@ const helloDiv = document.getElementById("hello__block");
 const hello = document.createElement('p');
 hello.innerText = `${tg.initDataUnsafe.user.first_name}, не забудь выбрать нужную озвучку`
 helloDiv.appendChild(data)
-
-
-document.getElementById('insertButton').addEventListener('click', () => {
-    navigator.clipboard.readText()
-        .then(text => {
-            textEl.textContent = text
-        })
-        .catch(err => {
-            console.log('Something went wrong', err);
-        })
-})
